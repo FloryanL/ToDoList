@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="demoApp">
+
+<head>
+    <title>Todolist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="web/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>ToDoList</h1>
+    </header>
+    <section ng-controller="TodoCtrl">
+        <form id="todo-form">
+            <input id="new-todo" placeholder="Nouvelle tâche..." />
+        </form>
+        <article>
+            ici le todo list
+        </article>
+        <input id="toucoch" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)" />
+        <label class="btnblue" for="toucoch">Tout cocher</label>
+        <button class="btnred" ng-click="clearCompletedTodos()">Supprimer les tâches cochées</button>
+    </section>
+
+    <script src="js/angular-js"></script>
+    <script src="js/todoList.js"></script>
+</body>
+
+</html>
